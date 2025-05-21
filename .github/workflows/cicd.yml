@@ -85,7 +85,7 @@ jobs:
       run: sudo apt install unzip -y
       
     - name: SonarQube Scan
-      uses: SonarSource/sonarqube-scan-action@v5.2.0 #Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+      uses: sonarsource/sonarqube-scan-action@master #Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:
         SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }}
