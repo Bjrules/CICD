@@ -61,6 +61,7 @@ jobs:
         cache: maven
     - name: Unit test Cases
       run: mvn test
+      
   build_Project_Sonar_scan:
     needs: test
     runs-on: banjo-host
@@ -75,6 +76,12 @@ jobs:
         cache: maven
     - name: Build project
       run: mvn package
+    
+    - name: Upload JAR artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-jar
+        path: target/*.jar 
       
     - uses: actions/checkout@v4
       with:
@@ -91,14 +98,14 @@ jobs:
         SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }}
 
     # Check the Quality Gate status.
-    # - name: SonarQube Quality Gate check
-    #   id: sonarqube-quality-gate-check
-    #   uses: sonarsource/sonarqube-quality-gate-action@master #Quality GATE
-    #   with:
-    #       pollingTimeoutSec: 600
-    #   env:
-    #       SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
-    #       SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }} #OPTIONAL
+    - name: SonarQube Quality Gate check
+      id: sonarqube-quality-gate-check
+      uses: sonarsource/sonarqube-quality-gate-action@master #Quality GATE
+      with:
+          pollingTimeoutSec: 600
+      env:
+          SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }} #OPTIONAL
           
   build_docker_image_and_push:
     runs-on: self-hosted
