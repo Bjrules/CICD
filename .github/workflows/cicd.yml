@@ -80,6 +80,10 @@ jobs:
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
+        
+    - name: Install unzip
+      run: sudo apt install unzip -y
+      
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v5.2.0 # Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:
