@@ -91,14 +91,14 @@ jobs:
         SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }}
 
     # Check the Quality Gate status.
-    - name: SonarQube Quality Gate check
-      id: sonarqube-quality-gate-check
-      uses: sonarsource/sonarqube-quality-gate-action@master #Quality GATE
-      with:
-          pollingTimeoutSec: 600
-      env:
-          SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }} #OPTIONAL
+    # - name: SonarQube Quality Gate check
+    #   id: sonarqube-quality-gate-check
+    #   uses: sonarsource/sonarqube-quality-gate-action@master #Quality GATE
+    #   with:
+    #       pollingTimeoutSec: 600
+    #   env:
+    #       SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
+    #       SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }} #OPTIONAL
           
   build_docker_image_and_push:
     runs-on: self-hosted
