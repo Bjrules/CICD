@@ -106,6 +106,8 @@ jobs:
       env:
           SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }} #OPTIONAL
+    - name: "Example show SonarQube Quality Gate Status value"
+      run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
           
   build_docker_image_and_push:
     runs-on: self-hosted
