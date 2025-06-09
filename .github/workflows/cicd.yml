@@ -91,11 +91,11 @@ jobs:
     - name: Install unzip
       run: sudo apt install unzip -y
       
-    - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@master #Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
-      env:
-        SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }}
+    # - name: SonarQube Scan
+    #   uses: sonarsource/sonarqube-scan-action@master #Ex: v4.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+    #   env:
+    #     SONAR_TOKEN: ${{ secrets.MY_SONAR_TOKEN }}
+    #     SONAR_HOST_URL: ${{ vars.MY_SONAR_HOST_URL }}
 
     #Check the Quality Gate status.
     # - name: SonarQube Quality Gate check
