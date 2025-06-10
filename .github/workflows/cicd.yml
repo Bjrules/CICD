@@ -110,6 +110,7 @@ jobs:
   build_docker_image_and_push:
     runs-on: banjo-host
     needs: build_Project_Sonar_scan
+    
     steps:
     - uses: actions/checkout@v4
     - name: Download JAR artifact
@@ -138,6 +139,7 @@ jobs:
   deploy_to_kubernetes:
     runs-on: banjo-host
     needs: build_docker_image_and_push
+    
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
