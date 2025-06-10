@@ -63,6 +63,10 @@ aws eks –region us-east-1 update-kubeconfig –name banjo-cluster      #kubeco
 ![Bootstrap kubernetes using the AWS EKS Module ScreenShot after Terraform Apply.....](project-screenshots/Screenshot_20250609_095838.png)
 
 
+### ~/.kube/config file content copied to GitHub for Configuration
+![~/.kube/config file content copied to GitHub for Configuration](project-screenshots/Screenshot_20250609_103721.png)
+
+
 ### Kubectl get nodes after the aws eks update-kubeconfig
 ![Kubectl get nodes after the aws eks update-kubeconfig](project-screenshots/Screenshot_20250609_100255.png)
 
@@ -75,15 +79,13 @@ aws eks –region us-east-1 update-kubeconfig –name banjo-cluster      #kubeco
 ### private Runner terminal after completion
 ![private Runner terminal after completion ](project-screenshots/Screenshot_20250610_194405.png)
 
-### Load Balancer DNS address display application after Deployment to kubernetes
-![Final Screen after Deployment to kubernetes](project-screenshots/Screenshot_20250609_113201.png)
 
-### Kubernetes Checking.  see ds.yml to see the Deplyment code
+### Kubernetes Checking.  see ds.yml to see the Deployment code
 ![Kubernetes Check.  see ds.yml to see the Deplyment code](project-screenshots/Screenshot_20250609_113027.png)
 
-### ~/.kube/config file content copied to GitHub for Configuration
-![~/.kube/config file content copied to GitHub for Configuration](project-screenshots/Screenshot_20250609_103721.png)
 
+### Load Balancer DNS address display application after Deployment to kubernetes
+![Final Screen after Deployment to kubernetes](project-screenshots/Screenshot_20250609_113201.png)
 
 
 
