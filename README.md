@@ -25,7 +25,7 @@ NB: I)  I copied the the content of ./kube/config to set up secrets on my GitHub
 II) I had setup a security Group named (GitHubAction-Runner-sg) with Inbound Rule  for the Security Group, SMTP 465, HTTP  80, Custom TCP 3000-11000, Custom TCP 587, HTTPS 443, SSH 22.
 and all the EC2 used this Security Group. " Private Runner, SonarQube Server, Kubernetes Server "
 
-
+```
 Some commands on My private VM Runner server:
 cd actions-runner
 ./run.sh
@@ -45,7 +45,7 @@ terraform plan
 terraform apply --auto-approve 
 aws eks –region us-east-1 update-kubeconfig –name banjo-cluster      #kubeconfig connects you from the kubernetes server to the cluster
 
-
+```
 
 This Project was Inspired by [Aditya Jaiswal](https://github.com/jaiswaladi246/)!
 
