@@ -1,11 +1,11 @@
-**A COMPLETE CI/CD PROJECT WITH GITHUB ACTION WHICH DEPLOYS A JAVA APPLICATION TO KUBERNETES:**
+# A COMPLETE CI/CD PROJECT WITH GITHUB ACTION WHICH DEPLOYS A JAVA APPLICATION TO KUBERNETES:
 
 All Source codes can be found in these Repository :
- https://github.com/Bjrules/CICD.git 
- https://github.com/Bjrules/EKS-Terraform-module.git 
+ [ Banjo Babade CICD REPOsitory](https://github.com/Bjrules/CICD.git)! 
+[ Banjo Babade CICD EKS Resitory](https://github.com/Bjrules/EKS-Terraform-module.git) 
 
-PIPELINE STAGES:  
-Compile > Security Check > Test > Build/Sonar Scan > Build and Push Docker image > Deploy to Kubernetes Repository 
+## PIPELINE STAGES:  
+### Compile > Security Check > Test > Build/Sonar Scan > Build and Push Docker image > Deploy to Kubernetes Repository 
 
 This project is about a CICD pipeline which is executed on a private-Runner which is an EC2 instance in AWS which I named "banjo-host" the pipeline is triggered on push to the ‘main’ branch of the CICD Repository. The job compiles with maven ’mvn compile’ after checkingout the code  and setting up of java with version ‘17’ with each step dependent on the Previous.
 
@@ -16,7 +16,7 @@ Under Test, I used maven to do testing “mvn test”. I then built with maven  
 I downloaded the uploaded Artifact, then build a Docker Image and pushed it to the Docker Registry.
 
 
-To Deploy this app to kubernetes, I set up a VM EC2 where I installed kubectl (For Interaction with EKS), Terraform(for AWS EKS Module)  and aws cli( For IAM Account Authentication, credential settings)  and configured the aws cli Credentials on Github> Settings> Actions> Runner Secrets and Variables,
+To Deploy this app to kubernetes, I set up a VM EC2 where I installed kubectl (For Interaction with EKS), Terraform(for AWS EKS Module)  and aws cli( For IAM Account Authentication, credential settings)  and configured the aws cli Credentials on Github > Settings > Actions > Runner > Secrets and Variables,
 
 
 
@@ -47,6 +47,6 @@ aws eks –region us-east-1 update-kubeconfig –name banjo-cluster      #kubeco
 
 
 
-This Project was Inspired by Aditya Jaiswal | https://github.com/jaiswaladi246/
+This Project was Inspired by [Aditya Jaiswal](https://github.com/jaiswaladi246/)!
 
 For questions, you can reach me on whatsapp +2348037871910 | Email: justbj@live.com
